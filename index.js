@@ -36,8 +36,11 @@ app.use(express.static(path.join(__dirname, "public")));
 function autenticar(req, res, next) {
   if (req.session && req.session.usuario) {
     return next();
-  }
+  }else {
   res.redirect("/login.html");
+
+  }
+
 }
 
 // Login
@@ -47,9 +50,11 @@ app.post("/login", (req, res) => {
   if (usuario === "admin" && senha === "123") {
     req.session.usuario = usuario;
     return res.redirect("/index.html");
+  }else {
+      res.redirect("/login.html");
+
   }
 
-  res.send("Usuário ou senha inválidos");
 });
 
 // Logout
