@@ -1,0 +1,32 @@
+{
+  "name": "projeto-unoeste-ppi---site-vendas-de-curso-",
+  "version": "1.0.0",
+  "description": "Projeto Node/Express de um site de venda de cursos",
+  "homepage": "https://github.com/RuanSantos-Developer/Projeto-Unoeste-PPI---Site-Vendas-de-Curso-#readme",
+  "bugs": {
+    "url": "https://github.com/RuanSantos-Developer/Projeto-Unoeste-PPI---Site-Vendas-de-Curso-/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RuanSantos-Developer/Projeto-Unoeste-PPI---Site-Vendas-de-Curso-.git"
+  },
+  "license": "ISC",
+  "author": "Ruan Oliveira dos Santos",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.12",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "npx": "^3.0.0",
+    "tailwindcss": "^4.1.12"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6"
+  }
+}
