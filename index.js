@@ -1,4 +1,4 @@
-// index.js (modo ESM)
+//importações
 import express from "express";
 import session from "express-session";
 import bodyParser from "body-parser";
@@ -11,6 +11,7 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = 3000;
+const host = '0.0.0.0'
 
 // Configuração do body-parser
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -45,9 +46,7 @@ app.post("/login", (req, res) => {
 
   if (usuario === "admin" && senha === "123") {
     req.session.usuario = usuario;
-    const destino = req.session.destino || "/";
-    delete req.session.destino;
-    return res.redirect(destino);
+    return res.redirect("/index.html");
   }
 
   res.send("Usuário ou senha inválidos");
@@ -73,5 +72,5 @@ app.get("/cursos/:id", autenticar, (req, res) => {
 
 // Iniciar servidor
 app.listen(PORT, () => {
-  console.log(`Servidor rodando em http://localhost:${PORT}`);
+  console.log(`Servidor rodando em http://localhost:${PORT}${host}`);
 });
