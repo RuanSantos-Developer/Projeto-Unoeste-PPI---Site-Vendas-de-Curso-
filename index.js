@@ -66,17 +66,10 @@ app.get("/logout", (req, res) => {
 // Cursos protegidos
 app.get("/cursos/:id", autenticar, (req, res) => {
   const cursoId = req.params.id;
-  res.sendFile(path.join(__dirname, "public", `curso${cursoId}.html`));
+  res.sendFile(path.join(__dirname, "private", `curso${cursoId}.html`));
 });
 
-// Guardar URL antes do login
-app.use((req, res, next) => {
-  if (!req.session.usuario && req.path.startsWith("/cursos")) {
-    req.session.destino = req.originalUrl;
-    return res.redirect("/login.html");
-  }
-  next();
-});
+
 
 // Iniciar servidor
 app.listen(PORT, () => {
