@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cursos Online</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -12,137 +12,99 @@
   <header class="w-full bg-gray-700 text-white px-8 py-4 flex justify-between items-center shadow-md">
     <h1 class="text-2xl font-bold">Portal de Cursos</h1>
     <nav>
-      <a href="/login.html" class="bg-gray-100 text-green-600 px-4 py-2 rounded-lg shadow hover:bg-gray-100 transition">
-        Login
+      <a href="/login.html"
+         class="bg-gray-100 text-green-600 px-4 py-2 rounded-lg shadow hover:bg-gray-200 transition">
+         Login
       </a>
-      <a href="/logout" class="ml-3 bg-red-500 text-white px-4 py-2 rounded-lg shadow hover:bg-red-600 transition">
-        Logout
+      <a href="/logout"
+         class="ml-3 bg-red-500 text-white px-4 py-2 rounded-lg shadow hover:bg-red-600 transition">
+         Logout
       </a>
     </nav>
   </header>
 
   <!-- Main -->
-  <main class="flex-1 w-full max-w-7xl mx-auto px-6 py-12">
+  <main class="flex-1 w-full max-w-6xl mx-auto px-6 py-12">
     <h2 class="text-3xl font-bold text-gray-100 mb-10 text-center">Cursos Disponíveis</h2>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-      
-      <!-- Card Curso -->
-      <div class="bg-gray-700 rounded-2xl shadow-lg hover:shadow-xl transition flex flex-col overflow-hidden min-h-[420px]">
-        <!-- Imagem -->
-        <div class="h-40 bg-gray-200 flex items-center justify-center">
-          <span class="text-gray-500">HTML</span>
-        </div>
-        <!-- Conteúdo -->
-        <div class="flex-1 p-6 flex flex-col justify-between">
-          <div>
-            <h3 class="text-xl font-bold mb-3 text-gray-100">Curso de HTML</h3>
-            <p class="text-gray-100 mb-4">Aprenda os fundamentos da web.</p>
- <p class="text-gray-100 mb-4"">Data de Inicio: 11 de Dezembro</p>
-                        <p class="text-gray-100 mb-4"">Duraçaõ: 1 mês</p>           
-                         <p class="text-lg font-semibold text-gray-100 mb-6">Preço: R$ 200</p>
-
-          </div>
-          <a href="/cursos/1" class="bg-gradient-to-r from-pink-600 via-pink-600 to-yellow-200 text-white text-center px-5 py-2 rounded-lg shadow hover:bg-blue-600 transition">
-            Ver Detalhes
-          </a>
-        </div>
-      </div>
-
-      
-      <div class="bg-gray-700 rounded-2xl shadow-lg hover:shadow-xl transition flex flex-col overflow-hidden min-h-[420px]">
-        <div class="h-40 bg-gray-200 flex items-center justify-center">
-          <span class="text-gray-500">CSS</span>
-        </div>
-        <div class="flex-1 p-6 flex flex-col justify-between">
-          <div>
-            <h3 class="text-xl font-bold mb-3 text-gray-100">Curso de CSS</h3>
-            <p class="text-gray-100 mb-4">Deixe seus sites bonitos e responsivos.</p>
- <p class="text-gray-100 mb-4"">Data de Inicio: 11 de Dezembro</p>
-                        <p class="text-gray-100 mb-4"">Duraçaõ: 1 mês</p>
-            <p class="text-lg font-semibold text-gray-100 mb-6">Preço: R$ 299,99</p>
-          </div>
-          <a href="/cursos/2" class="bg-gradient-to-r from-pink-600 via-pink-600 to-yellow-200 text-white text-center px-5 py-2 rounded-lg shadow hover:bg-blue-600 transition">
-            Ver Detalhes
-          </a>
-        </div>
-      </div>
-
-      <div class="bg-gray-700 rounded-2xl shadow-lg hover:shadow-xl transition flex flex-col overflow-hidden min-h-[420px]">
-        <div class="h-40 bg-gray-200 flex items-center justify-center">
-          <span class="text-gray-500">JAVASCRIPT</span>
-        </div>
-        <div class="flex-1 p-6 flex flex-col justify-between">
-          <div>
-            <h3 class="text-xl font-bold mb-3 text-gray-100">Curso de JavaScript</h3>
-            <p class="text-gray-100 mb-4">Adicione interatividade aos seus sites.</p>
- <p class="text-gray-100 mb-4"">Data de Inicio: 11 de Dezembro</p>
-                        <p class="text-gray-100 mb-4"">Duraçaõ: 1 mês</p>
-            <p class="text-lg font-semibold text-gray-100 mb-6">Preço: R$ 499,99</p>
-          </div>
-          <a href="/cursos/3" class="bg-gradient-to-r from-pink-600 via-pink-600 to-yellow-200 text-white text-center px-5 py-2 rounded-lg shadow hover:bg-blue-600 transition">
-            Ver Detalhes
-          </a>
-        </div>
-      </div>
-
-      <div class="bg-gray-700 rounded-2xl shadow-lg hover:shadow-xl transition flex flex-col overflow-hidden min-h-[420px]">
-        <div class="h-40 bg-gray-200 flex items-center justify-center">
-          <span class="text-gray-500">PYTHON</span>
-        </div>
-        <div class="flex-1 p-6 flex flex-col justify-between">
-          <div>
-            <h3 class="text-xl font-bold mb-3 text-gray-100">Curso de Python</h3>
-            <p class="text-gray-100 mb-4">Aprenda tudo sobre Python.</p>
- <p class="text-gray-100 mb-4"">Data de Inicio: 11 de Dezembro</p>
-                        <p class="text-gray-100 mb-4"">Duraçaõ: 1 mês</p>
-            <p class="text-lg font-semibold text-gray-100 mb-6">Preço: R$ 1433,99</p>
-          </div>
-          <a href="/cursos/4" class="bg-gradient-to-r from-pink-600 via-pink-600 to-yellow-200 text-white text-center px-5 py-2 rounded-lg shadow hover:bg-blue-600 transition">
-            Ver Detalhes
-          </a>
-        </div>
-      </div>
-
-      <div class="bg-gray-700 rounded-2xl shadow-lg hover:shadow-xl transition flex flex-col overflow-hidden min-h-[420px]">
-        <div class="h-40 bg-gray-200 flex items-center justify-center">
-          <span class="text-gray-500">REACT</span>
-        </div>
-        <div class="flex-1 p-6 flex flex-col justify-between">
-          <div>
-            <h3 class="text-xl font-bold mb-3 text-gray-100">Curso de React</h3>
-            <p class="text-gray-100 mb-4">Front-End com React.</p>
- <p class="text-gray-100 mb-4"">Data de Inicio: 11 de Dezembro</p>
-                        <p class="text-gray-100 mb-4"">Duraçaõ: 1 mês</p>
-            <p class="text-lg font-semibold text-gray-100 mb-6">Preço: R$ 678</p>
-          </div>
-          <a href="/cursos/5" class="bg-gradient-to-r from-pink-600 via-pink-600 to-yellow-200 text-white text-center px-5 py-2 rounded-lg shadow hover:bg-blue-600 transition">
-            Ver Detalhes
-          </a>
-        </div>
-      </div>
-
-      <div class="bg-gray-700 rounded-2xl shadow-lg hover:shadow-xl transition flex flex-col overflow-hidden min-h-[420px]">
-        <div class="h-40 bg-gray-200 flex items-center justify-center">
-          <span class="text-gray-500">TYPESCRIPT</span>
-        </div>
-        <div class="flex-1 p-6 flex flex-col justify-between">
-          <div>
-            <h3 class="text-xl font-bold mb-3 text-gray-100">Curso de TypeScript</h3>
-            <p class="text-gray-100 mb-4">Evolua de JavaScript para TypeScript.</p>
-                        <p class="text-gray-100 mb-4"">Data de Inicio: 11 de Dezembro</p>
-                        <p class="text-gray-100 mb-4"">Duraçaõ: 1 mês</p>
-
-            <p class="text-lg font-semibold text-gray-100 mb-6">Preço: R$ 550</p>
-          </div>
-          <a href="/cursos/6" class="bg-gradient-to-r from-pink-600 via-pink-600 to-yellow-200 text-white text-center px-5 py-2 rounded-lg shadow hover:bg-blue-600 transition">
-            Ver Detalhes
-          </a>
-        </div>
-      </div>
-
+    <div class="overflow-x-auto shadow-xl rounded-xl">
+      <table class="w-full border-collapse">
+        <thead class="bg-gray-800 text-gray-100">
+          <tr>
+            <th class="px-6 py-4 text-left">Curso</th>
+            <th class="px-6 py-4 text-left">Início</th>
+            <th class="px-6 py-4 text-left">Duração</th>
+            <th class="px-6 py-4 text-left">Preço</th>
+            <th class="px-6 py-4 text-center">Ação</th>
+          </tr>
+        </thead>
+        <tbody class="bg-gray-700 text-gray-100 divide-y divide-gray-600">
+          <!-- HTML -->
+          <tr>
+            <td class="px-6 py-4 font-semibold">HTML</td>
+            <td class="px-6 py-4">11 de Dezembro</td>
+            <td class="px-6 py-4">1 mês</td>
+            <td class="px-6 py-4">R$ 200</td>
+            <td class="px-6 py-4 text-center">
+              <a href="/private/curso1.html"
+                 class="bg-gradient-to-r from-pink-600 to-yellow-200 text-white px-4 py-2 rounded-lg shadow hover:brightness-110 transition">
+                 Ver Detalhes
+              </a>
+            </td>
+          </tr>
+          <!-- CSS -->
+          <tr>
+            <td class="px-6 py-4 font-semibold">CSS</td>
+            <td class="px-6 py-4">11 de Dezembro</td>
+            <td class="px-6 py-4">1 mês</td>
+            <td class="px-6 py-4">R$ 299,99</td>
+            <td class="px-6 py-4 text-center">
+              <a href="/cursos/2" class="bg-gradient-to-r from-pink-600 to-yellow-200 text-white px-4 py-2 rounded-lg shadow hover:brightness-110 transition">Ver Detalhes</a>
+            </td>
+          </tr>
+          <!-- JavaScript -->
+          <tr>
+            <td class="px-6 py-4 font-semibold">JavaScript</td>
+            <td class="px-6 py-4">11 de Dezembro</td>
+            <td class="px-6 py-4">1 mês</td>
+            <td class="px-6 py-4">R$ 499,99</td>
+            <td class="px-6 py-4 text-center">
+              <a href="/cursos/3" class="bg-gradient-to-r from-pink-600 to-yellow-200 text-white px-4 py-2 rounded-lg shadow hover:brightness-110 transition">Ver Detalhes</a>
+            </td>
+          </tr>
+          <!-- Python -->
+          <tr>
+            <td class="px-6 py-4 font-semibold">Python</td>
+            <td class="px-6 py-4">11 de Dezembro</td>
+            <td class="px-6 py-4">1 mês</td>
+            <td class="px-6 py-4">R$ 1.433,99</td>
+            <td class="px-6 py-4 text-center">
+              <a href="/cursos/4" class="bg-gradient-to-r from-pink-600 to-yellow-200 text-white px-4 py-2 rounded-lg shadow hover:brightness-110 transition">Ver Detalhes</a>
+            </td>
+          </tr>
+          <!-- React -->
+          <tr>
+            <td class="px-6 py-4 font-semibold">React</td>
+            <td class="px-6 py-4">11 de Dezembro</td>
+            <td class="px-6 py-4">1 mês</td>
+            <td class="px-6 py-4">R$ 678</td>
+            <td class="px-6 py-4 text-center">
+              <a href="/cursos/5" class="bg-gradient-to-r from-pink-600 to-yellow-200 text-white px-4 py-2 rounded-lg shadow hover:brightness-110 transition">Ver Detalhes</a>
+            </td>
+          </tr>
+          <!-- TypeScript -->
+          <tr>
+            <td class="px-6 py-4 font-semibold">TypeScript</td>
+            <td class="px-6 py-4">11 de Dezembro</td>
+            <td class="px-6 py-4">1 mês</td>
+            <td class="px-6 py-4">R$ 550</td>
+            <td class="px-6 py-4 text-center">
+              <a href="/cursos/6" class="bg-gradient-to-r from-pink-600 to-yellow-200 text-white px-4 py-2 rounded-lg shadow hover:brightness-110 transition">Ver Detalhes</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </main>
-
 </body>
 </html>

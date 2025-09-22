@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.12",
+    "bootstrap": "^5.3.8",
     "express": "^5.1.0",
     "express-session": "^1.18.2",
     "npx": "^3.0.0",

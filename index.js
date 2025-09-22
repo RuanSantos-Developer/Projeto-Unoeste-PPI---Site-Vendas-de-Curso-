@@ -1,21 +1,15 @@
 //importações
 import express from "express";
 import session from "express-session";
-import bodyParser from "body-parser";
-import path from "path";
-import { fileURLToPath } from "url";
+import verificarAutenticado from "./seguranca/autenticar.js";
 
-// Ajuste para __dirname em ESM
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = 3000;
 const host = '0.0.0.0'
 
 // Configuração do body-parser
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Configuração da sessão
 app.use(
@@ -30,31 +24,18 @@ app.use(
 );
 
 // Configuração para servir arquivos estáticos
-app.use(express.static(path.join(__dirname, "public")));
-
-// Middleware de autenticação
-function autenticar(req, res, next) {
-  if (req.session && req.session.usuario) {
-    return next();
-  }else {
-  res.redirect("/login.html");
-
-  }
-
-}
 
 // Login
 app.post("/login", (req, res) => {
-  const { usuario, senha } = req.body;
+  const usuario = req.body.usuario;
+  const senha = req.body.senha;
 
-  if (usuario === "admin" && senha === "123") {
-    req.session.usuario = usuario;
-    return res.redirect("/index.html");
-  }else {
-      res.redirect("/login.html");
-
+  if (usuario === "admin" && senha === "admin") {
+    req.session.autenticado = true;
+    res.redirect("/menu.html");
+  } else {
+    res.redirect("/login.html");
   }
-
 });
 
 // Logout
@@ -63,16 +44,14 @@ app.get("/logout", (req, res) => {
     if (err) {
       return res.send("Erro ao fazer logout.");
     }
-    res.redirect("/index.html"); // volta pro index
+    res.redirect("/index.html"); 
   });
 });
 
-// Cursos protegidos
-app.get("/cursos/:id", autenticar, (req, res) => {
-  const cursoId = req.params.id;
-  res.sendFile(path.join(__dirname, "private", `curso${cursoId}.html`));
-});
 
+
+app.use(express.static("public"));
+app.use(verificarAutenticado, express.static("private"));
 
 
 // Iniciar servidor
